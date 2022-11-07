@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Assessment App</title>
+    <link rel="stylesheet" href = "./css/style.css">
+</head>
+<body>
+    <!-- 기본정보 -->
+    <div id="basic_info">
+        <span>
+            <!-- 타이틀 -->
+            <h1>6div Reconnaissance Risk Assesssment</h1>
+            <!-- 시간 -->
+            <h2 id="current_time">Current Time : </h2>
+        </span>
+        <!-- 유저 입력 -->
+        <form id="login_form">
+            <input type="text" placeholder="Enter Your Username" required />
+            <button>Log In</button>
+        </form>
+        <h2 id="user_name" class="hidden"> user : </h2>
+    </div>
+    <!-- 작전 투입,철수 시간 -->
+    <div id="operations_time">
+        <h2> 작전 투입 시간 </h2>
+        <span>
+            <form id ="search"> 수색 
+                <input tpye="text" placeholder="투입" required />
+                <input tpye="text" placeholder="철수" required />
+                <button>Enter</button>
+            </form>
+            <h3 id = "search_time" class = "hidden"></h3>          
+        </span>
+        <span>
+            <form id = "ambush"> 매복 
+                <input tpye="text" placeholder="투입" required />
+                <input tpye="text" placeholder="철수" required />
+                <button>Enter</button>
+            </form>          
+            <h3 id = "ambush_time" class = "hidden"></h3>
+        </span>
+    </div>
+    <!-- 내일 작전 시간대 기상 -->
+    <div id="weather">
+        <h2> </h2>
+        <table border="1">
+            <th>시간</th>
+            <th>날씨</th>
+            <th>기온</th>
+            <th>습도</th>
+        </table>
+    </div>
+    <!-- 초기화 -->
+    <div id="reset">
+        <h2></h2>
+        <button> Reset </button>
+    </div>
+    <script src="./js/session.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/user.js" ></script>
+    <script src="./js/operation_time.js"></script>
+    <script src="./js/weather.js"></script> 
+    <script src="./js/reset.js"></script>
+</body>
+</html>
